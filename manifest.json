@@ -4,12 +4,12 @@
     "description": "Calculator: A simple calculator developed by Ashit Roy.",
     "icons": [
         {
-            "src": "/assets/ic_icon.png",
+            "src": "/assets/images/ic_icon_round.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/assets/ic_icon.png",
+            "src": "/assets/images/ic_icon_round.png",
             "sizes": "512x512",
             "type": "image/png"
         }
