@@ -1,0 +1,21 @@
+{
+    "name": "Calculator",
+    "short_name": "Calculator",
+    "description": "Calculator: A simple calculator developed by Ashit Roy.",
+    "icons": [
+        {
+            "src": "/assets/ic_icon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/ic_icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "orientation": "any"
+}
