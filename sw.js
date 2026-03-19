@@ -4,9 +4,9 @@ const STATIC_ASSETS = [
     '/',
     '/index',
     '/history',
-    '/style.css',
+    '/css/style.css',
     '/css/history.css',
-    '/script.js',
+    '/js/script.js',
     '/js/history.js'
 ];
 
