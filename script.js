@@ -2,6 +2,10 @@ let result = document.getElementById("result");
 
 let expression = "";
 
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js');
+}
+
 // Function to update display
 function updateDisplay() {
     result.innerText = expression || "0";
