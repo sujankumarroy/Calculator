@@ -2,6 +2,9 @@ let result = document.getElementById("result");
 
 let expression = "";
 
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js');
+}
 
 // Function to update display
 function updateDisplay() {
@@ -15,6 +18,10 @@ for (let i = 0; i <= 9; i++) {
         updateDisplay();
     };
 }
+
+document.getElementById("btn-his").onclick = function () {
+    window.location.href = "history.html";
+};
 
 // Operators
 document.getElementById("btn-pls").onclick = () => { expression += "+"; updateDisplay(); };
