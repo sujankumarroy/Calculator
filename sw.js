@@ -3,8 +3,11 @@ const CACHE_NAME = `calculator-v${APP_VERSION}`;
 const STATIC_ASSETS = [
     '/',
     '/index',
+    '/history',
     '/style.css',
-    '/script.js'
+    '/css/history.css',
+    '/script.js',
+    '/js/history.js'
 ];
 
 self.addEventListener("install", event => {

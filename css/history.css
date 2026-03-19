@@ -1,0 +1,65 @@
+/* Layout for the History Page */
+.history-page-container {
+  background: #2b2b3c;
+  padding: 25px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 350px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* Scrollable area for entries */
+.history-list {
+  max-height: 350px;
+  overflow-y: auto;
+  background: #1e1e2f;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.history-item {
+  padding: 15px;
+  border-bottom: 1px solid #3a3a4f;
+  color: #00ffcc;
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+/* Specific buttons for this page */
+.back-btn {
+  background: #3a3a4f;
+  color: white;
+  padding: 8px 15px;
+}
+
+.clear-all-btn {
+  background: #ff7043;
+  color: white;
+  width: 100%;
+}
+
+.empty-msg {
+  color: #888;
+  text-align: center;
+  padding: 30px;
+  font-style: italic;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
