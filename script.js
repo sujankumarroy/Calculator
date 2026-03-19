@@ -2,9 +2,6 @@ let result = document.getElementById("result");
 
 let expression = "";
 
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js');
-}
 
 // Function to update display
 function updateDisplay() {
@@ -29,7 +26,10 @@ document.getElementById("btn-dsml").onclick = () => { expression += "."; updateD
 // Equal button
 document.getElementById("btn-eql").onclick = function () {
     try {
+        const expr = expression;
         expression = eval(expression).toString();
+        const result = expression;
+        saveToHistory(expr, result);
     } catch {
         expression = "Error";
     }
@@ -47,3 +47,16 @@ document.getElementById("btn-del").onclick = function () {
     expression = expression.slice(0, -1);
     updateDisplay();
 };
+
+// Function to save calculation to Local Storage
+function saveToHistory(expr, res) {
+    if (res === "Error") return;
+
+    let history = JSON.parse(localStorage.getItem("calcHistory")) || [];
+    const entry = `${expr} = ${res}`;
+
+    history.unshift(entry);
+    history = history.slice(0, 50);
+
+    localStorage.setItem("calcHistory", JSON.stringify(history));
+}
